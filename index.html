@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<style>
+    input[type=text] {
+        border-radius: 10px;
+        background-image:url('file:///home/yasmine/Downloads/Screenshot_2020-06-19%20Google.png');
+        background-repeat: no-repeat;
+        background-position: 0px;
+        height: 20px;
+        width: 50%; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input[type=submit] {
+        border:none;
+        background-color: rgb(236, 236, 236);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 15px 10px 15px;
+    }
+    .buttonHolder {
+        text-align: center; 
+    }
+    .glogo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        margin-bottom: auto;
+    }
+    p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        position: fixed;
+        top: 20px;
+        width: 100%;
+    }
+    footer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        background-color: rgb(241, 238, 238);
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: lightgray, 5px;
+    }
+    .leftNav {
+        float: left;
+        vertical-align: baseline;
+    }
+    .rightNav {
+        float: right;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+        vertical-align: baseline;
+        margin: 10px;
+    }
+    .leftFoot {
+        float: left;
+        margin: 10px;
+    }
+    .rightFoot {
+        float: right;
+        margin: 10px;
+    }
+    a:link {
+        text-decoration: none;
+        color: gray;
+    }
+    .signIn {
+        background-color: rgb(36, 106, 238);
+        color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px 15px 5px 15px;
+        display: inline-block;
+    }
+    a {
+        color: rgb(97, 97, 97);
+        ;
+    }
+    .dropButton {
+        background-image: url('file:///home/yasmine/Downloads/waffle.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        padding: 10px 10px 8px 10px;
+    }
+    .dropdown {
+        position:relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position:absolute;
+        background-color: white;
+        min-width: 200px;
+        z-index: 2;
+        border: black;
+    }
+    .show {
+        display: block;
+    }
+</style>
+<html>
+<head>
+    <title>This is Google.com. A place where all information is found.</title>
+</head>
+<body>
+    <nav style="text-decoration: none;">
+        <div class="leftNav">
+            <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Store</a></li>
+            </ul>
+        </div>
+        <div class="rightNav">
+            <ul>
+            <li><a href="">Gmail</a></li>
+            <li><a href="">Images</a></li>
+            <li><div class="dropdown">
+                <button onclick="myFunction()" class="dropButton"></button>
+                <div id="myDropdown" class="dropdown-content">
+                <a href="">link1</a><br>
+                <a href="">link2</a>
+                </div>
+            </div></li>
+            <li><a href="" target="_blank" class="signIn">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="glogo">
+    </div>
+    <div>
+        <form>
+        <div>
+        <input type="text" id="search" name="search"><br>
+        </div>
+        <div class="buttonHolder">
+        <input type="submit" id="google search" name="Google Search" value="Google Search">
+        <input type="submit" id="i'm feeling lucky" name="i'm feeling lucky" value="I'm Feeling Lucky">
+        </div>
+    </form>
+    </div>
+    <div>
+        <p>Different text goes here on different days.</p>
+    </div>
+    <footer style="text-decoration: none;">
+        <div class="leftFoot">
+        <ul>
+        <li><a href="">Advertising</a></li>
+        <li><a href="">Business</a></li>
+        <li><a href="">How Search Works</a></li>
+        </ul>
+        </div>
+        <div class="rightFoot">
+        <ul>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Settings</a></li>
+        </ul>
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
